@@ -3,8 +3,8 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class TemperaturaService {
   private temperaturaAtual: number | null = null;
-  private minTemperatura: number = 0;
-  private maxTemperatura: number = 100;
+  private minTemperatura: number = 23.0;
+  private maxTemperatura: number = 24.0;
 
   // Retorna a temperatura atual
   getTemperaturaAtual() {
