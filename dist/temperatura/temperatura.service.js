@@ -18,10 +18,15 @@ let TemperaturaService = class TemperaturaService {
         return { temperatura: this.temperaturaAtual };
     }
     updateTemperaturaAtual(temperatura) {
+        console.log("temperatura recebida: ", temperatura);
         this.temperaturaAtual = temperatura;
         return { message: 'Temperatura atualizada', temperatura: this.temperaturaAtual };
     }
     getTemperaturaSettings() {
+        console.log("getSettings: "), {
+            minTemperatura: this.minTemperatura,
+            maxTemperatura: this.maxTemperatura,
+        };
         return {
             minTemperatura: this.minTemperatura,
             maxTemperatura: this.maxTemperatura,

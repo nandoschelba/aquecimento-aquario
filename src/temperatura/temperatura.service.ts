@@ -13,12 +13,17 @@ export class TemperaturaService {
 
   // Atualiza a temperatura atual
   updateTemperaturaAtual(temperatura: number) {
+    console.log("temperatura recebida: ", temperatura)
     this.temperaturaAtual = temperatura;
     return { message: 'Temperatura atualizada', temperatura: this.temperaturaAtual };
   }
 
   // Retorna os parâmetros de temperatura máxima e mínima configurados
   getTemperaturaSettings() {
+    console.log("getSettings: "), {
+      minTemperatura: this.minTemperatura,
+      maxTemperatura: this.maxTemperatura,
+    }
     return {
       minTemperatura: this.minTemperatura,
       maxTemperatura: this.maxTemperatura,
