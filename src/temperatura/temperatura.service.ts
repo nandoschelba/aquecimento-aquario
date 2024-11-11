@@ -20,11 +20,12 @@ export class TemperaturaService {
 
   // Retorna os parâmetros de temperatura máxima e mínima configurados
   getTemperaturaSettings() {
-    console.log("getSettings: "), {
+    console.log("getSettings chamado: "), {
       minTemperatura: this.minTemperatura,
       maxTemperatura: this.maxTemperatura,
     }
     return {
+      message: `Temperatura máxima: ${this.maxTemperatura} e minima: ${this.minTemperatura}`,
       minTemperatura: this.minTemperatura,
       maxTemperatura: this.maxTemperatura,
     };
@@ -32,10 +33,11 @@ export class TemperaturaService {
 
   // Atualiza os parâmetros de temperatura máxima e mínima
   updateTemperaturaSettings(minTemperatura: number, maxTemperatura: number) {
+    console.log(`Temperatura máxima: ${maxTemperatura} e minima: ${minTemperatura} atualizadas`)
     this.minTemperatura = minTemperatura;
     this.maxTemperatura = maxTemperatura;
     return {
-      message: 'Temperatura settings updated',
+      message: 'Temperatura settings atualizado',
       minTemperatura: this.minTemperatura,
       maxTemperatura: this.maxTemperatura,
     };

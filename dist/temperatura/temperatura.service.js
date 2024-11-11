@@ -23,20 +23,22 @@ let TemperaturaService = class TemperaturaService {
         return { message: 'Temperatura atualizada', temperatura: this.temperaturaAtual };
     }
     getTemperaturaSettings() {
-        console.log("getSettings: "), {
+        console.log("getSettings chamado: "), {
             minTemperatura: this.minTemperatura,
             maxTemperatura: this.maxTemperatura,
         };
         return {
+            message: `Temperatura máxima: ${this.maxTemperatura} e minima: ${this.minTemperatura}`,
             minTemperatura: this.minTemperatura,
             maxTemperatura: this.maxTemperatura,
         };
     }
     updateTemperaturaSettings(minTemperatura, maxTemperatura) {
+        console.log(`Temperatura máxima: ${maxTemperatura} e minima: ${minTemperatura} atualizadas`);
         this.minTemperatura = minTemperatura;
         this.maxTemperatura = maxTemperatura;
         return {
-            message: 'Temperatura settings updated',
+            message: 'Temperatura settings atualizado',
             minTemperatura: this.minTemperatura,
             maxTemperatura: this.maxTemperatura,
         };

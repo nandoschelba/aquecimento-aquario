@@ -10,6 +10,7 @@ export declare class TemperaturaController {
         temperatura: number;
     };
     getTemperatureSettings(): {
+        message: string;
         minTemperatura: number;
         maxTemperatura: number;
     };

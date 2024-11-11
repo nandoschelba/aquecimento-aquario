@@ -20,7 +20,6 @@ export class TemperaturaController {
   // Retorna os parâmetros de temperatura máxima e mínima configurados
   @Get('settings')
   getTemperatureSettings() {
-    console.log('opa')
     return this.temperaturaService.getTemperaturaSettings();
   }
 

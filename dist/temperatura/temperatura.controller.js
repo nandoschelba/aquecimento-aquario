@@ -26,7 +26,6 @@ let TemperaturaController = class TemperaturaController {
         return this.temperaturaService.updateTemperaturaAtual(temperatura);
     }
     getTemperatureSettings() {
-        console.log('opa');
         return this.temperaturaService.getTemperaturaSettings();
     }
     updateTemperatureSettings(minTemperatura, maxTemperatura) {

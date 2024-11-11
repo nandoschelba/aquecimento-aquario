@@ -10,6 +10,7 @@ export declare class TemperaturaService {
         temperatura: number;
     };
     getTemperaturaSettings(): {
+        message: string;
         minTemperatura: number;
         maxTemperatura: number;
     };
