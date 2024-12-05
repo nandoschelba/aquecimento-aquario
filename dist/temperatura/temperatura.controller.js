@@ -22,8 +22,8 @@ let TemperaturaController = class TemperaturaController {
     getTemperaturaAtual() {
         return this.temperaturaService.getTemperaturaAtual();
     }
-    updateTemperaturaAtual(temperatura) {
-        return this.temperaturaService.updateTemperaturaAtual(temperatura);
+    updateTemperaturaAtual(temperatura, statusAquecedor) {
+        return this.temperaturaService.updateTemperaturaAtual(temperatura, statusAquecedor);
     }
     getTemperatureSettings() {
         return this.temperaturaService.getTemperaturaSettings();
@@ -34,34 +34,35 @@ let TemperaturaController = class TemperaturaController {
 };
 exports.TemperaturaController = TemperaturaController;
 __decorate([
-    (0, common_1.Get)('current'),
+    (0, common_1.Get)("current"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], TemperaturaController.prototype, "getTemperaturaAtual", null);
 __decorate([
-    (0, common_1.Post)('current'),
-    __param(0, (0, common_1.Body)('temperatura')),
+    (0, common_1.Post)("current"),
+    __param(0, (0, common_1.Body)("temperatura")),
+    __param(1, (0, common_1.Body)("statusAquecedor")),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
+    __metadata("design:paramtypes", [Number, Boolean]),
     __metadata("design:returntype", void 0)
 ], TemperaturaController.prototype, "updateTemperaturaAtual", null);
 __decorate([
-    (0, common_1.Get)('settings'),
+    (0, common_1.Get)("settings"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], TemperaturaController.prototype, "getTemperatureSettings", null);
 __decorate([
-    (0, common_1.Put)('settings'),
-    __param(0, (0, common_1.Body)('minTemperatura')),
-    __param(1, (0, common_1.Body)('maxTemperatura')),
+    (0, common_1.Put)("settings"),
+    __param(0, (0, common_1.Body)("minTemperatura")),
+    __param(1, (0, common_1.Body)("maxTemperatura")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number, Number]),
     __metadata("design:returntype", void 0)
 ], TemperaturaController.prototype, "updateTemperatureSettings", null);
 exports.TemperaturaController = TemperaturaController = __decorate([
-    (0, common_1.Controller)('temperatura'),
+    (0, common_1.Controller)("temperatura"),
     __metadata("design:paramtypes", [temperatura_service_1.TemperaturaService])
 ], TemperaturaController);
 //# sourceMappingURL=temperatura.controller.js.map
